@@ -2003,7 +2003,10 @@ const setSourceDestinationTray = () => {
 
 function flightSearch(sourceCity, destinationCity, travelDate) {
    // Assuming your flight data is stored in a variable called 'flightsData'
+   // Using data1 so that we can test filtering and sorting in action since the API results have only 1 airline and all the fare are same for a flight path
+   // Replace data1 with data for API
    let flightsData = data1;
+   // let flightsData = data; // uncomment this and comment above line for API Fetching
    let matchingFlights = flightsData.data.result.filter((flight) => {
      let depCityCode = flight.displayData.source.airport.cityCode;
      let arrCityCode = flight.displayData.destination.airport.cityCode;

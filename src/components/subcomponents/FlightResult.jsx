@@ -31,12 +31,9 @@ function FlightResult(props){
             </div>
             <div className="price">
                     <div>
-                    <p className="first-p">$ {props.fare}</p>
-                    <p className="second-p offer"> Jet100 ✅ ₹100</p>
-                    {/* <p className="second-p book-now">Book Now</p> */}
+                        <p className="first-p">$ {props.fare}</p>
+                        <p className="second-p offer"> Jet100 ✅ ₹100</p>
                     </div>
-
-
             <div>
                     <p className="second-p book-now">Book Now</p>
             </div>

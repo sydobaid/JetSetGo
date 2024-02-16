@@ -3,7 +3,6 @@ import {setSourceDestinationTray} from "../../Utils/common"
 
 function Dropdown(props) {
   const destinations = Array.from(setSourceDestinationTray());
-  console.log(destinations)
   
   const [inputValue, setInputValue] = useState("");
   const [selectedInputValue, setSelectedInputValue] = useState("");
@@ -38,7 +37,6 @@ function Dropdown(props) {
     setSuggestions(matchedDestinations);
   };
 
-  // Fix this
   const handleInputClick = () => {
     setDropDown(true)
   };
@@ -57,8 +55,6 @@ function Dropdown(props) {
         </>
         ): (
         <>
-          {/* <strong>{props.type === "From" ? fromOrTo.DefaultFrom[0] : fromOrTo.DefaultTo[0]}</strong>
-          {props.type === "From" ? fromOrTo.DefaultFrom[1]+ " " + fromOrTo.DefaultFrom[2] : fromOrTo.DefaultTo[1] + " " + fromOrTo.DefaultTo[2]} */}
           <span style={{color: 'lightgray', marginTop: '8px'}}>{props.type === "From" ? 'Enter City' : 'Enter City'}</span>
         </>
       )}</span>
@@ -80,7 +76,6 @@ function Dropdown(props) {
           {suggestions.map((destination) => (
             <div key={destination} onClick={() => 
               { 
-                console.log(destination);
                 setSelectedInputValue(destination)
                 setInputValue(destination)
                 setDropDown(false)

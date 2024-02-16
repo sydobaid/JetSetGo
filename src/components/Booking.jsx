@@ -4,8 +4,6 @@ import FareType from "./subcomponents/FareType";
 import Dropdown from "./subcomponents/Dropdown";
 import DropdownDate from "./subcomponents/DropdownDate";
 import DropdownPassenger from "./subcomponents/DropdownPassenger";
-// import FlightResult from "./subcomponents/FlightResult";
-
 
 function Booking({searchFlight}){
     // The parent component for radio button (Booking) manages the selected radio button, 
@@ -28,7 +26,6 @@ function Booking({searchFlight}){
     const [source, setSource] = useState('');
     const [destination, setDestination] = useState('');
     const [travelDate, setTravelDate] = useState(new Date());
-    console.log(source + ' ' + destination + ' ' + travelDate)
     return(
         <div className="booking-container">
             <div className="booking-heading">
@@ -41,8 +38,6 @@ function Booking({searchFlight}){
                     <Radio id="round-trip" text="Round-trip" selected={selectedRadio} name={'booking-type'} setter={setSelectedRadio} />
                     <Radio id="mutli-city" text="Mutli-city" selected={selectedRadio} name={'booking-type'} setter={setSelectedRadio} />
                 </div>
-
-                {/* From */}
                 <div className="booking-selection-container">
                     <Dropdown type={'From'} styleType={'input'} setCityHandler={sourceHandler}/>
                     <Dropdown type={'To'} styleType={'input'} setCityHandler={destinationHandler}/>
