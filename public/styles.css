@@ -1,0 +1,543 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* Default CSS */
+html,body{
+    background-color: #EEF2F7;
+    margin: 0;
+    /* display: block; This is by default applied*/
+}
+
+
+/* ====== NAVBAR  ====== */
+
+
+/* Setting font Size 30px Nav to use it ahead as EM unit*/
+.navbar{
+    z-index: 1;
+}
+nav{
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 2.5%;
+    box-shadow: 0px 25px 21px -20px rgba(214,211,211,0.45);
+}
+
+/* Stylings for brand name - JetSetGo */
+.word-jet{
+    color: #FE6D38;
+}
+.word-setgo{
+    color : #2173E0;
+}
+
+nav h1{
+    display: inline;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    font-weight:900;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Stylings for nav items (right aligned) */
+
+.right-nav-items {
+    display: flex;
+    align-items: center;
+}
+
+/* Login/Signup button */
+/* TODO
+1. Button ke andar right me arrow add kro
+2. Add another button
+*/
+.login-signup{
+    height: 40px;
+    background-color: transparent;
+    width: 13em;
+    border-radius: 10px;
+    border: 1px solid #2173E0;
+}
+nav button img{
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
+}
+
+
+/* ====== BOOKING  ====== */
+
+.booking-container{
+    display: flex;
+    justify-content: center;
+}
+
+.booking-heading{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='256' fill='none'%3E%3Cpath fill='url(%23a)' fill-rule='evenodd' d='M1440 167.207C1224.62 223.655 980.573 255.5 722 255.5c-260.175 0-505.644-32.241-722-89.345V0h1440v167.207Z' clip-rule='evenodd'/%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='1048.73' y1='0' y2='787.836' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF6D38'/%3E%3Cstop offset='1' stop-color='%23DB7A21'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 353px;
+    background-position: center bottom;
+    width: 100%;
+    top: 0px;
+    margin-bottom: 125px;
+}
+
+.booking-heading h1{
+    color: white;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 1.3em;
+    text-shadow: 0px 1px #515151;
+    text-align: center;
+    padding: 1% 0;
+}
+
+.booking-card{
+    margin-top: 4.5em;
+    background-color: #FFFFFF;
+    height: 325px;
+    width: auto;
+    border-radius: 20px;
+    z-index: 1;
+    padding: 20px 20px;
+    position: absolute;
+}
+
+.radio-group{
+    display: flex;
+    flex-direction: row;
+    margin: .5%;
+}
+
+.booking-selection-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.search-button{
+    font-family: 'Rubik';
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgb(255, 109, 56);
+    border-radius: 30px;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 16px 45px;
+    outline: 0px;
+    border: 0px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 92%;
+    left: 38%;
+
+}
+
+.search-button:hover{
+    background-color: #EA6125;
+}
+
+/* ====== RADIO  ====== */
+
+.radio-div{
+    border-radius: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    /* margin: .5%; */
+    padding: 8px 15px;
+    cursor: pointer; /* Add cursor pointer on hover to indicate interactivity */
+}
+
+.radio-div.booking-type-checked {
+    background-color: #dae9ff;
+}
+.radio-div input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    align-items: center;
+    margin-right: 10px;
+  }
+.radio-div label{
+    /* color: #777777; */
+    color: #2173E0;
+    font-family: 'Rubik';
+    font-weight: 500;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+/* ====== DROPDOWN  ====== */
+.dropdown-container {
+    position: relative;
+    /* display: flex;
+    flex-direction: row; */
+    width: 225px;
+    height: 50px;
+    border: 2px solid rgb(225, 231, 238);
+    border-radius: 10px;
+    padding: 7px 15px;
+    margin: 3% 1%;
+    font-family: 'Rubik';
+}
+
+.dropdown-container-date {
+    width: 150px;
+}
+
+.dropdown-date-container {
+    
+    /* height: 100%;
+    border-radius: 5px; */
+    cursor: pointer;
+    margin: 3% 1%;
+}
+
+.dropdown-date-container input{
+    position: relative;
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 94%;
+    border: 2px solid rgb(225, 231, 238);
+    border-radius: 10px;
+    font-family: 'Rubik';
+}
+.dropdown-container:hover{
+    border: 2px solid #777777;
+}
+
+.dropdown-container span{
+    margin-top: -10px;
+    margin-bottom: auto;
+}
+
+.location-list{
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.location-list div{
+    padding: 16px;
+}
+
+.location-name {
+    /* display: flex; */
+    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  
+}
+
+.dropdown-container label {
+    position: relative;
+    /* top: 86px; */
+    top: -35%;
+    background-color: white;
+    /* z-index: 101; */
+    padding: 5px;
+}
+
+.location-dropdown {
+    width: 262px;
+    border-radius: 5px;
+    /* border: 2px solid #ededed; */
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-color: white;
+    /* border: 2px solid red; */
+    box-shadow: 0px 25px 21px -20px rgba(214,211,211,0.45);
+    
+    z-index: 100;
+}
+
+.location-dropdown-date {
+    width: 215px;
+}
+
+.dropdown-input {
+    width: 96%;
+}
+
+.flight-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+} 
+
+.location-list:hover{
+    background-color: #dae9ff;
+}
+
+.dropdown-container input{
+    /* width: 225px; */
+    height: 75px;
+    border-radius: 5px;
+    border: 2px solid #ededed;
+    cursor: pointer;
+}
+
+.location-dropdown ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.location-dropdown li{
+    width: 225px;
+    background-color: blue;
+}
+
+.dropdown-container-passenger {
+    width: 200px
+}
+
+.location-dropdown-passenger {
+    width: 102%;
+}
+  
+/* ====== FareType  ====== */
+
+.fare-type-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.fare-type-text{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 58px;
+    line-height: normal;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.fare-type-radio{
+    display: flex;
+    flex-direction: row;
+}
+
+.fare-type-radio .radio-div{
+    background-color: rgb(242,242,242);
+    border-radius: 0;
+    margin-right: 5px;
+}
+
+.radio-div.fare-type-checked {
+    background-color: #dae9ff;
+}
+
+
+.passenger-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.passenger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px 9px;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.passenger-type {
+    width: calc(100% - 130px);
+}
+
+/* ====== FareType  ====== */
+
+.flight-result-container{
+    padding: 1% 1.25%;
+    width: 88%;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+}
+.flight-result-container{
+    font-family: 'Rubik';
+}
+.airline-details{
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.time-details{
+    width: 15%;
+}
+
+.airline-details div p{
+    margin: 0;
+    margin-left: 10px;
+}
+
+.first-p{
+    color: #000000;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.second-p{
+    color: rgb(119, 119, 119);
+    margin: 0;
+    margin-left: 10px;
+}
+
+.airline-details div p:first-child{
+    color: #000000;
+}
+
+.airline-details div p:nth-child(2){
+    color: rgb(119, 119, 119);
+}
+
+.book-now{
+    background-color:#FE6D38;
+    font-size: 18px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 2px 4px;
+    margin-left: 20px;
+}
+.offer{
+    color: darkgreen;
+    font-size: 12px;
+}
+.book-now:hover{
+    background-color: #EA6125;
+}
+
+.price{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+    width: 20%;
+}
+
+.flight-result-container span{
+    display: flex;
+    align-items: center;
+}
+.flight-result-container span img{
+    transform: rotate(44.5deg);
+}
+
+.time-details-container{
+    display: flex;
+    width: 65%;
+    justify-content: center;
+}
+
+.time-details-container span{
+    margin: auto 50px;
+}
+
+hr{
+    border: 2px solid rebeccapurple;
+    width: 100%;
+}
+
+.time-details-sub-div{
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-details-sub-div span:first-child {
+    font-size: 12px;
+}
+
+
+/* Price Sort Button */
+
+.price-sort-button{
+    font-family: 'Rubik';
+    font-weight: 600;
+    background-color: #dae9ff;
+    color: #2173E0;
+    border: 1px solid #2173E0;
+    margin: auto 10px;
+}
+
+.price-sort-button:hover{
+    background-color: #2173E0;
+    color: #FFFFFF;
+    transform: scale(1.2);
+}
+
+.button-container{
+    font-family: 'Rubik';
+    display: flex;
+    justify-content: right;
+    width: 95%;
+}
+
+.button-container input{
+    margin-right: 6px;
+}
+.button-container div{
+    margin-right: 63%;
+}
+.sorry-message{
+    font-family: 'Rubik';
+    justify-content: center;
+    display: none;
+}
+
+.sorry-message-visible{
+    display: flex;
+}
+
+.sorry-message h1{
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #dae9ff;
+    color: #2173E0;
+    text-align: center;
+    width: 50%;
+    border-radius: 20px;
+    padding: .5% 0; 
+    border: 1px solid #FE6D38;
+    animation: bounce 1s infinite; /* Apply bounce animation */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px); /* Adjust bounce height as needed */
+    }
+    60% {
+        transform: translateY(-10px); /* Adjust bounce height as needed */
+    }
+}
