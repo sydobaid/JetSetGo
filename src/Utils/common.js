@@ -878,7 +878,7 @@ const data1 = {
                 "airlines":[
                    {
                       "airlineCode":"AB",
-                      "airlineName":"JetSpice",
+                      "airlineName":"Emirates",
                       "flightNumber":"1234"
                    }
                 ],
@@ -956,7 +956,7 @@ const data1 = {
                 "airlines":[
                    {
                       "airlineCode":"AB",
-                      "airlineName":"JetSpice",
+                      "airlineName":"Air India",
                       "flightNumber":"1234"
                    }
                 ],

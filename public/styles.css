@@ -504,17 +504,11 @@ hr{
 .button-container input{
     margin-right: 6px;
 }
-.button-container div{
-    margin-right: 63%;
-}
+
 .sorry-message{
     font-family: 'Rubik';
     justify-content: center;
     display: none;
-}
-
-.sorry-message-visible{
-    display: flex;
 }
 
 .sorry-message h1{

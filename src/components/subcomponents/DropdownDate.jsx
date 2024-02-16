@@ -39,7 +39,6 @@ function DropdownDate(props) {
   const handleInputChange = (e) => {
     
     setSelectedInputValue(formatDate(e.target.value));
-    console.log(e.target.value);
     props.setTravelDateHandler(e.target.value)
   };
 

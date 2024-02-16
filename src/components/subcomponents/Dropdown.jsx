@@ -38,7 +38,6 @@ function Dropdown(props) {
     setSuggestions(matchedDestinations);
   };
 
-  const fromOrTo = {"DefaultFrom": ["Mumbai,", "India", "(BOM)"], "DefaultTo": ["Delhi,", "India", "(DEL)"]}
   // Fix this
   const handleInputClick = () => {
     setDropDown(true)
